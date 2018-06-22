@@ -1,0 +1,4 @@
+out
+.terraform
+# this has secrets
+terraform.tfstate
