@@ -2,3 +2,5 @@ out
 .terraform
 # this has secrets
 terraform.tfstate
+cluster.tf
+terraform.tfstate.backup

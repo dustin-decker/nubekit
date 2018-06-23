@@ -21,6 +21,6 @@ docker run -d \
     -assets-path /assets
 
 echo "forwarding via ngrok"
-ngrok http 8080
+ngrok http -subdomain matchbox.ngrok.io 8080
 
 echo "done"

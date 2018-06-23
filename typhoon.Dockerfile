@@ -2,7 +2,7 @@ FROM alpine:latest
 
 ENV TERRAFORM_VERSION=0.11.7
 
-RUN apk add --no-cache git openssh && \
+RUN apk add --no-cache git openssh openssh-client && \
     wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin && \
     rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip

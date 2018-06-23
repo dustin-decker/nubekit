@@ -1,8 +1,9 @@
 #!/bin/sh
 set -e
 
-mkdir -p ~/.ssh
-ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa -q -N ""
+eval $(ssh-agent)
+ssh-add /root/.ssh/id_rsa
+ssh-add -L
 
 TASK="$1"
 

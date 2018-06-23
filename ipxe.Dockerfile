@@ -1,5 +1,6 @@
 # Build stage
 FROM alpine as builder
+ENV MATCHBOX=http://matchbox.ngrok.io.ngrok.io
 RUN apk add --no-cache cdrkit bash syslinux mtools gcc git make perl musl-dev xz-dev python3  \
  && rm -rf /var/cache/apk/* && pip3 install envtpl
 RUN cd /; git clone https://github.com/ipxe/ipxe.git
